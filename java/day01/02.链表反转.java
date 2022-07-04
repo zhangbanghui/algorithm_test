@@ -37,3 +37,26 @@ class Solution {
         }
     }
 }
+
+/**
+ * 递归方式.
+ */
+class Solution2 {
+    public ListNode reverseList(ListNode head) {
+        if(head == null || head.next == null){
+            return head;
+        }
+        return reverse(head, null);
+    }
+
+    private ListNode reverse(ListNode head, ListNode last){
+        if(head == null){
+            return last;
+        }
+        ListNode a = head;
+        head = head.next;
+        a.next = last;
+        last = a;
+        return reverse(head, last);
+    }
+}
