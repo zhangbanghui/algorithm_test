@@ -53,3 +53,25 @@ public class Solution {
         return null;
     }
 }
+
+/**
+ * 知道是判断地址后使用这个更优
+ */
+public class Solution2 {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        Set<ListNode> set = new HashSet();
+        ListNode a = headA;
+        while(a != null){
+            set.add(a);
+            a = a.next;
+        }
+        a = headB;
+        while(a != null){
+            if(set.contains(a)){
+                return a;
+            }
+            a = a.next;
+        }
+        return null;
+    }
+}
