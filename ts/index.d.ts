@@ -3,3 +3,5 @@ declare class ListNode {
   next: ListNode | null;
   constructor(val?: number, next?: ListNode | null);
 }
+
+declare const coderName = "123";
