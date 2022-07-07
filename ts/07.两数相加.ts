@@ -29,8 +29,6 @@ function addTwoNumbers(
     if (stack2.length > 0) {
       item2 = stack2.pop();
     }
-    console.log("item1", item1?.val ?? 0);
-    console.log("item2", item2?.val ?? 0);
     const item = new ListNode();
     const value = (item1?.val ?? 0) + (item2?.val ?? 0) + Number(flag);
     if (value >= 10) {
